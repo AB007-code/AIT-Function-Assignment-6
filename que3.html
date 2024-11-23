@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 3.) Remove Whitespace from a String Write a function that removes all leading and trailing whitespace from a string.
+     function trim_string(str){
+        let bag = "";
+        let len = str.length;
+        for(let i=0; i<len; i++){
+            if(str[i]==" "){
+                continue;
+            }else{
+                bag+=str[i];
+                if(str[i+1]==" "){
+                 bag=bag+" ";
+                }
+            }
+        }
+        // console.log(bag[bag.length-1])
+        bag1=""
+        for(let i=0; i<=bag.length-1; i++){
+            if(bag[bag.length-1]===" "){
+                if(i==bag.length-1){
+              continue;
+            }
+            }else{
+             bag1+=bag[i]
+            }
+        }
+        return bag1;
+    }
+     
+     let trim = trim_string("  Hello     World  america          ,  india")
+     console.log(trim.length,trim)
+    //  console.log("  Hello World   ".length)
+    console.log("  Hello     World  america          ,  india   ".trim())
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+// 4.) Sort an Array of Strings Alphabetically Write a function that sorts an array of strings.
+// note:- console.log("Ram">"Abhilash") //
+// 1. Lexicographical Comparison:
+// Step-by-step breakdown:
+function sorted(arr){
+    let i = 0;
+    let j;
+    while(i<arr.length){
+        j=i+1
+        console.log(arr)
+        while(j<arr.length){
+            if(arr[i]>arr[j]){  // This happens because JavaScript compares the strings based on their Unicode values
+             let temp = arr[i];
+               arr[i] = arr[j]
+               arr[j] = temp;
+               console.log(arr)
+            }
+            j++
+        }
+        i++
+    }
+    return arr;
+}
+let ans = sorted(["man","Ram","sita","karan","Abhilash"]);
+console.log(ans)
+    </script>
+</body>
+</html>
